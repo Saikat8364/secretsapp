@@ -81,7 +81,7 @@ passport.use(new GoogleStrategy({
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: "https://secretsappbysaikat.herokuapp.com/auth/google/secrets",
+    callbackURL: "https://secretsappbysaikat.herokuapp.com/auth/facebook/secrets",
     enableProof : true
   },
   function(accessToken, refreshToken, profile, done) {
