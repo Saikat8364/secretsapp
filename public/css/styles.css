@@ -1,0 +1,27 @@
+
+body {
+  background-color: #E8ECEF;
+}
+
+.social-block{
+  margin-bottom: 5px;
+
+}
+
+.auth-button{
+  padding: 0;
+}
+
+.centered {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color:#374045 ;
+  background-color:#f8f1f1 ;
+  margin: 2rem 20rem;
+  word-wrap: break-word;
+}
