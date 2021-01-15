@@ -66,7 +66,7 @@ passport.deserializeUser(function(id, done) {
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/google/secrets",
+    callbackURL: "https://secretsappbysaikat.herokuapp.com/auth/google/secrets",
     //userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
     userProfileURL: "https://openidconnect.googleapis.com/v1/userinfo"
   },
@@ -81,7 +81,7 @@ passport.use(new GoogleStrategy({
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: "http://localhost:3000/auth/facebook/secrets",
+    callbackURL: "https://secretsappbysaikat.herokuapp.com/auth/google/secrets",
     enableProof : true
   },
   function(accessToken, refreshToken, profile, done) {
@@ -141,6 +141,10 @@ app.get("/submit",function(req,res){
   }else{
     res.redirect("/login");
   }
+});
+
+app.get("/privacy",function(req,res){
+  res.render("privacy");
 });
 
 app.post("/submit",function(req,res){
